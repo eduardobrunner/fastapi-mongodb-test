@@ -13,7 +13,9 @@ def find_all_users():
 def create_user(user: User):
     new_user = dict(user)
     print (new_user)
-    return "received"
+    id = conn.local.user.insert_one(new_user).inserted_id
+    return str(id)
+    
 
 @user.get('/users/{id}')
 def find_user():
