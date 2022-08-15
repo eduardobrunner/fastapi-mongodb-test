@@ -12,9 +12,11 @@ def find_all_users():
 @user.post('/users')
 def create_user(user: User):
     new_user = dict(user)
-    print (new_user)
+    del new_user["id"]
+    #print (new_user)
     id = conn.local.user.insert_one(new_user).inserted_id
-    return str(id)
+    user=conn.local.user.find_one({"_id":id})
+    return userEntity(user)
     
 
 @user.get('/users/{id}')

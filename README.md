@@ -17,3 +17,12 @@
 - FastAPI incluye una documentacion en Swagger que se va generando automaticamente y permite interactuar de forma practica con la API a medida que vamos progresando en el programa
 - En la carpeta config se crea un archivo db.py para llamar una biblioteca de python (procedo a 2.3)
 - El modelo que se crea para interactuar con la db se enontrará en la folder models. Importo pydantic
+
+# 4 base de datos
+- 1 descargar mongodb local server
+- 2 agregar la raiz de la carpeta bin al path  de windows
+- 3 descargar mongo shell y copiar contenido de bin a nuetra raiz 
+- 4 abrir como admin una ventana de cmd y ejecutar: mongod   para poder lanzar la db mongo
+- 5 abrir otra ventana cmd y ejec: mongosh    para poder interactuar con la base de datos
+- 6 ahora se puede insertar documentos a la coleccion 
+
