@@ -19,6 +19,7 @@
 - En la carpeta config se crea un archivo db.py para llamar una biblioteca de python (procedo a 2.3)
 - El modelo que se crea para interactuar con la db se enontrará en la folder models. Importo pydantic
 - Para encriptar datos uso passlib.hash import sha256_crypt. Luuego aplico sha256_crypt.encrypt para cifrar (ver 2.4)
+- En el user.delete se emplea una respuesta HTTP 204. Para ello al comienzo en routes from starlette.status import HTTP_204_NO_CONTENT. Y en fastapi import Response. Esto lo usamos al final de la funcion delete como return Response(status_code=HTTP_204_NO_CONTENT) 
 
 
 # 4 base de datos

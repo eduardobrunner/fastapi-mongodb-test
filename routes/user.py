@@ -1,9 +1,11 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Response
 from config.db import conn
 from schemas.user import userEntity, usersEntity
 from models.user import User
 from passlib.hash import sha256_crypt
 from bson import ObjectId
+from starlette.status import HTTP_204_NO_CONTENT
+
 
 user = APIRouter()
 
@@ -28,9 +30,11 @@ def find_user(id: str):
     return userEntity(conn.local.user.find_one({"_id":ObjectId(id)}))
 
 @user.put('/users/{id}')
-def update_user():
-    return "hello world" 
+def update_user(id: str, user: User):
+    conn.local.user.find_one_and_update({"_id": ObjectId(id)}, {"$set": dict(user)})
+    return userEntity(conn.local.user.find_one({"_id": ObjectId(id)}))
 
 @user.delete('/users/{id}')
-def delete_user():
-    return "hello world" 
+def delete_user(id: str):
+    userEntity(conn.local.user.find_one_and_delete({"_id": ObjectId(id)}))
+    return Response(status_code=HTTP_204_NO_CONTENT)
