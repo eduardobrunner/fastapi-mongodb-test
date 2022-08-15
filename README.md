@@ -20,6 +20,7 @@
 - El modelo que se crea para interactuar con la db se enontrará en la folder models. Importo pydantic
 - Para encriptar datos uso passlib.hash import sha256_crypt. Luuego aplico sha256_crypt.encrypt para cifrar (ver 2.4)
 
+
 # 4 base de datos
 - 1 descargar mongodb local server
 - 2 agregar la raiz de la carpeta bin al path  de windows
@@ -27,4 +28,5 @@
 - 4 abrir como admin una ventana de cmd y ejecutar: mongod   para poder lanzar la db mongo
 - 5 abrir otra ventana cmd y ejec: mongosh    para poder interactuar con la base de datos
 - 6 ahora se puede insertar documentos a la coleccion 
+- 7 from bson import ObjectId en routes, bson corresponde a un modulo de la bibliot de mongodb. Este convierte un ObjectId a un string, se usa para buscar un documento segun id
 
