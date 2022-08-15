@@ -9,6 +9,7 @@
 - 1 pip install fastapi #instalar framework y todos los paquetes. 
 - 2 pip install uvicorn #este paquete permite ejecutar app de fastapi
 - 3 pip install pymongo #modulo para poder conectarnos a mongodb
+- 4 pip install passlib #modulo para poder encriptar datos
 
 ## 3 Proyecto anotaciones
 - uvicorn app:app #para ejecutar una app con uvicorn. app es el archivo py, y app es el objeto q devuelve FastAPI()
@@ -17,6 +18,7 @@
 - FastAPI incluye una documentacion en Swagger que se va generando automaticamente y permite interactuar de forma practica con la API a medida que vamos progresando en el programa
 - En la carpeta config se crea un archivo db.py para llamar una biblioteca de python (procedo a 2.3)
 - El modelo que se crea para interactuar con la db se enontrará en la folder models. Importo pydantic
+- Para encriptar datos uso passlib.hash import sha256_crypt. Luuego aplico sha256_crypt.encrypt para cifrar (ver 2.4)
 
 # 4 base de datos
 - 1 descargar mongodb local server
