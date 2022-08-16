@@ -1,3 +1,8 @@
+## Descripcion breve
+- Esta api se realiza con el fin de estudiar y comprender la tecnologia FastAPI relacionando datos con mongodb. Se ha realizado paso a paso lo explicado por el usuario Fazt Code en el siguiente video:
+
+- https://www.youtube.com/watch?v=_eWEmRWhk9A
+
 ## 1 Creacion de Entorno Virtual (EV)
 - Uso Anaconda Prompt (anaconda3)
 - cd Desktop
